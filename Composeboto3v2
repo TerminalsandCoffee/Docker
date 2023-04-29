@@ -1,0 +1,18 @@
+version: "3"
+services:
+  repo1:
+    build: .
+    image: boto3-python
+    volumes:
+      - ./repo1:/app/repo1
+    command: sleep infinity
+  repo2:
+    image: ubuntu
+    volumes:
+      - ./repo2:/app/repo2
+    command: sleep infinity
+  repo3:
+    image: python
+    volumes:
+      - ./repo3:/app/repo3
+    command: sleep infinity

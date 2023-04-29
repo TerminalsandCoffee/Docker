@@ -1,0 +1,20 @@
+version: '3.9'
+
+services:
+  container1:
+    build: .
+    image: boto3-python
+    volumes:
+      - ./repo1:/app/repo1
+
+  container2:
+    build: .
+    image: boto3-python
+    volumes:
+      - ./repo2:/app/repo2
+
+  container3:
+    build: .
+    image: boto3-python
+    volumes:
+      - ./repo3:/app/repo3

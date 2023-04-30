@@ -2,7 +2,7 @@ version: "3"
 
 services:
   
-  redis_service:
+  redis:
     image: redis:7.0.9
     ports:
       - "6379"
@@ -15,7 +15,7 @@ services:
       placement:
         constraints: [node.role != manager]
   
-  httpd_service:
+  apache:
     image: httpd:2.4.56
     ports:
       - "8080:80"
@@ -28,7 +28,7 @@ services:
       placement:
         constraints: [node.role != manager]
     
-  postgres_service:
+  postgres:
     image: postgres:15.2
     volumes:
       - db-data:/var/lib/postgresql/data

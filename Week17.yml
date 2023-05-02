@@ -8,7 +8,7 @@ services:
       replicas: 10
       placement:
         constraints:
-          - node.role==worker
+          - node.role != manager
   
   data_base:
     image: redis:latest
@@ -16,7 +16,7 @@ services:
       replicas: 4
       placement:
         constraints:
-          - node.role==worker
+          - node.role != manager
 
   data_base2:
     image: postgres:latest
@@ -26,4 +26,4 @@ services:
       replicas: 1
       placement:
         constraints:
-          - node.role==worker
+          - node.role!= manager

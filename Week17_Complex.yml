@@ -29,7 +29,7 @@ services:
         constraints: [node.role == worker]
     
   postgres:
-    image: postgres:latest
+    image: postgres:15
     volumes:
       - db-data:/var/lib/postgresql/data
     ports:
